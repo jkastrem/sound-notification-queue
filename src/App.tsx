@@ -2,7 +2,7 @@ import React from 'react';
 
 export const App = () => {
   return (
-    <div className="App">
+    <div>
       <button>Sound notifications</button>
     </div>
   );

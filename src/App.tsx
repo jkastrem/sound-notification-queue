@@ -12,8 +12,8 @@ export const App = () => {
   return (
     <div>
       <button onClick={() => {
-        console.log('click');
-        setTimeout(() => pushNotification(), 1500);
+        pushNotification();
+        console.log(queue);
       }}>Sound notifications</button>
     </div>
   );

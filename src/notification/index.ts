@@ -16,7 +16,6 @@ export const soundQueue = (notificationsQueue: Array<HTMLAudioElement>) => {
           } else {
             nextSound.play();
           }
-          console.log(target);
         }
         value.play();
       }

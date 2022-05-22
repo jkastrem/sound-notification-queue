@@ -13,7 +13,6 @@ export const App = () => {
     <div>
       <button onClick={() => {
         pushNotification();
-        console.log(queue);
       }}>Sound notifications</button>
     </div>
   );

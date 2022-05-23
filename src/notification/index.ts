@@ -1,11 +1,10 @@
-export const soundQueue = (notificationsQueue: Array<HTMLAudioElement>) => {
+const soundQueue = (notificationsQueue: Array<HTMLAudioElement>) => {
   let soundIndex = 0;
 
   return new Proxy(notificationsQueue, {
     set(target, property, value: HTMLAudioElement | number) {
       if (property === 'length' && typeof value === 'number') {
         target.length = value;
-        return true;
       } else if (value instanceof HTMLAudioElement) {
         target.push(value);
         value.onended = () => {
@@ -23,3 +22,5 @@ export const soundQueue = (notificationsQueue: Array<HTMLAudioElement>) => {
     }
   })
 }
+
+export const soundNotifications = soundQueue([])
